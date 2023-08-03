@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { App } from './App';
+import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'mobx-react';
+import AppStore from './store/app.store';
+import { RootStore } from './store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const appStore = new AppStore();
 root.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode>    
+      <BrowserRouter>    
+        <Provider {...RootStore}>
+          <App/>      
+        </Provider>   
+      </BrowserRouter>    
   </React.StrictMode>
 );
 
