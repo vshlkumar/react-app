@@ -15,9 +15,12 @@ const appStore = new AppStore();
 root.render(
   <React.StrictMode>    
       <BrowserRouter>    
-        <Provider {...RootStore}>
+        <Provider {...RootStore}>{/*add multiple store*/}
           <App/>      
         </Provider>   
+        {/*<Provider appStore={appStore}>
+          <App/>      
+        </Provider>   add single store*/}
       </BrowserRouter>    
   </React.StrictMode>
 );
