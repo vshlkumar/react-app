@@ -4,7 +4,6 @@ import { Component, ReactNode } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ErrorComponent from './components/error/Error';
 import ResponsiveAppBar from './layout/appbarlayout';
-import AppStore from './store/app.store';
 
 
 export class App extends Component {
